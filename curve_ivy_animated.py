@@ -620,7 +620,8 @@ class IvyPanel(Panel):
         row.prop(opt, 'num_roots')
         col.separator()
 
-        col.prop(opt, 'collider', icon='OBJECT_DATA')
+        #col.prop(opt, 'collider', icon='OBJECT_DATA')
+        col.prop_search(opt, "collider", scene, "objects", text="Collider")
         if opt.has_collider:
             col.prop(opt, 'collision_margin')
 
