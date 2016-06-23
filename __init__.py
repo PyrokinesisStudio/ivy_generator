@@ -7,7 +7,7 @@ bl_info = {
     "description": "Add ivy",
     "warning": "",
     "wiki_url": "",
-    "category": "User",
+    "category": "Add Curve",
 }
 
 if "bpy" in locals():
@@ -55,7 +55,7 @@ class INFO_MT_ivy_generator_menu(bpy.types.Menu):
 
         col.menu('Object_library_add',
             icon_value=ivy_leaf_icon.icon_id)
-        
+
 
 def menu_func(self, context):
     pcoll = preview_collections["main"]
@@ -87,7 +87,7 @@ def register():
     #register this files UI
     bpy.utils.register_module(__name__)
     bpy.types.INFO_MT_curve_add.prepend(menu_func)
-    
+
 
 def unregister():
     #un-register sub-scripts
